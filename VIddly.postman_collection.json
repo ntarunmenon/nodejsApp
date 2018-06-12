@@ -1,0 +1,202 @@
+{
+	"variables": [],
+	"info": {
+		"name": "VIddly",
+		"_postman_id": "978203ec-cbd0-9cf6-e426-25e9db59df50",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Genres - Post",
+			"request": {
+				"url": "localhost:3000/api/genres",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\": \"Thriller\",\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Genres - Get",
+			"request": {
+				"url": "localhost:3000/api/genres",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Genres - Delete",
+			"request": {
+				"url": "localhost:3000/api/genres/5b1b85dae97f6919eeeb7689",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"name\": \"Adventure\"\n    }\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Customers - Delete",
+			"request": {
+				"url": "localhost:3000/api/customers/5b1bb7f7f8a13c32481f302c",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\n        \"name\": \"Adventure\"\n    }\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Customers - Post",
+			"request": {
+				"url": "localhost:3000/api/customers",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Arun Menon\",\n\t\"isGold\": false,\n\t\"phone\":\"1234567\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Customers - Put",
+			"request": {
+				"url": "localhost:3000/api/customers/5b1bb96d6be1d533de30ab5f",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Nitya Nathan\",\n\t\"isGold\": false,\n\t\"phone\":\"1234567\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Customers - Get",
+			"request": {
+				"url": "localhost:3000/api/customers",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Arun Menon\",\n\t\"isGold\": false,\n\t\"phone\":\"1234567\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Movies - Get",
+			"request": {
+				"url": "localhost:3000/api/movies/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Arun Menon\",\n\t\"isGold\": false,\n\t\"phone\":\"1234567\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Movies - Delete",
+			"request": {
+				"url": "localhost:3000/api/movies/5b1fc3308e8f6a2bb5e71ec2",
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Movies - Post",
+			"request": {
+				"url": "localhost:3000/api/movies",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"title\": \"Panic Room\",\n\t\"genreId\":\"5b1bbd24ce6b4836fbd0b9e8\",\n\t\"numberInStock\": 3,\n\t\"dailyRentalRate\": 10\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
