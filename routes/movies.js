@@ -4,7 +4,7 @@ const router = express.Router();
 const Joi = require('joi');
 const {Movie,validate} = require('../models/movie');
 const {Genre} = require('../models/genre');
-
+const auth = require('../middleware/authcheck')
 
 router.get('/', async (req, res) => {
     const movies = await Movie.find().sort('title');
@@ -24,7 +24,7 @@ router.delete('/:id', async (req, res) => {
 });
 
 
-router.post('/', async (req, res) => {
+router.post('/', auth, async (req, res) => {
     const { error } = validate(req.body); 
     if (error) return res.status(400).send(error.details[0].message);
     

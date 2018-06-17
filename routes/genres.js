@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const router = express.Router();
 const Joi = require('joi');
 const {Genre,validate} = require('../models/genre');
-
-
+const auth = require('../middleware/authcheck')
+const admin = require('../middleware/admin')
 
   
   router.get('/', async (req, res) => {
@@ -12,7 +12,7 @@ const {Genre,validate} = require('../models/genre');
     res.send(genres);
   });
   
-  router.post('/', async (req, res) => {
+  router.post('/', auth, async (req, res) => {
     const { error } = validate(req.body); 
     if (error) return res.status(400).send(error.details[0].message);
   
@@ -36,7 +36,7 @@ const {Genre,validate} = require('../models/genre');
     res.send(genre);
   });
   
-  router.delete('/:id', async (req, res) => {
+  router.delete('/:id',[auth,admin], async (req, res) => {
     
     const genre = await Genre.findByIdAndRemove(req.params.id);
     
